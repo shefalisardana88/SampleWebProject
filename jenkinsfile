@@ -31,8 +31,10 @@ pipeline {
         {
         steps{
         
-        echo "Deploying the code"
+        echo "Deploying the code...."
+        
         deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://localhost:80')], contextPath: 'SampleWebApp.war', war: '**/*.war'
+          echo "Deploying the code...."
         }
         
         }
