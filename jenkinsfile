@@ -33,7 +33,7 @@ pipeline {
         
         echo "Deploying the code...."
         
-        deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://localhost:80')], contextPath: 'SampleWebApp.war', war: '**/*.war'
+       deploy adapters: [tomcat9(credentialsId: 'http://localhost:80', path: '', url: 'http://localhost:80')], contextPath: 'SampleWebApp.war', war: '**/*.war'
       
         }
         
